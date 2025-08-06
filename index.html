@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternals Store - Portal de Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&family=Trajan+Pro:wght@400;700&family=Futura:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mandala de fondo -->
+    <div class="eternal-mandala">
+        <div class="mandala-ring"></div>
+        <div class="mandala-ring"></div>
+        <div class="mandala-ring"></div>
+        <div class="mandala-ring"></div>
+        <div class="mandala-ring"></div>
+        <div class="eternal-symbols">
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+        </div>
+        <div class="power-threads">
+            <div class="thread" style="--rotation: 0deg;"></div>
+            <div class="thread" style="--rotation: 45deg;"></div>
+            <div class="thread" style="--rotation: 90deg;"></div>
+            <div class="thread" style="--rotation: 135deg;"></div>
+            <div class="thread" style="--rotation: 180deg;"></div>
+            <div class="thread" style="--rotation: 225deg;"></div>
+            <div class="thread" style="--rotation: 270deg;"></div>
+            <div class="thread" style="--rotation: 315deg;"></div>
+        </div>
+    </div>
+
+    <!-- Sistema de partículas -->
+    <div class="golden-particles" id="particles"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="https://lafilec.github.io/LAFILec/" class="logo">
+                <span class="logo-icon">🎵</span>
+                <span class="logo-text">LA FIL</span>
+                <div class="logo-waves">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+            </a>
+
+            <div class="hamburger" id="hamburger">☰</div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="https://lafilec.github.io/LAFILec/" rel="noopener" class="nav-link">Retornar</a></li>
+                <li><a href="https://vaki.co/es/vaki/9bw4pe0KavU7nMg0O8XH" class="nav-link gold-button" target="_blank">💰 Crowdfunding</a></li>
+                <li><a href="https://instagram.com/lafil.ec?igsh=MTc1MzY4MjdsYXZhYg==" class="nav-link gold-button" target="_blank">📸 Instagram</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Encabezado principal -->
+    <div class="header">
+        <h1 class="main-logo">STICKER STORE</h1>
+        <p class="subtitle">Personaliza, colecciona y expresa con estilo, cada diseño cuenta algo. Tú decides dónde y cómo.</p>
+    </div>
+
+    <!-- Contenedor de productos -->
+    <div class="products-container">
+        <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="copyright">© 2025 La Fil. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal de compra normal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-product-name" id="modalProductName">Producto</h2>
+                <p class="modal-product-price" id="modalProductPrice">$0.00</p>
+            </div>
+
+            <!-- Selector de cantidad -->
+            <div class="quantity-section">
+                <h3 class="quantity-title">Cantidad</h3>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" id="decreaseBtn" onclick="changeQuantity(-1)">−</button>
+                    <input type="number" id="quantityInput" value="1" min="1" max="999" readonly>
+                    <button class="quantity-btn" id="increaseBtn" onclick="changeQuantity(1)">+</button>
+                </div>
+                <div class="total-price" id="totalPrice">Total: $0.00</div>
+            </div>
+
+            <!-- Sección QR -->
+            <div class="qr-section">
+                <h3 class="qr-title">Código QR de Pago</h3>
+                <div class="qr-placeholder">
+                    El código QR <br>
+                </div>
+            </div>
+
+            <!-- Información del vendedor -->
+            <div class="seller-info">
+                <h3>Información</h3>
+                <p><strong>Nombre:</strong> Ramiro Elba Surero</p>
+                <p><strong>Cédula:</strong> 1727259324</p>
+                <p><strong>Teléfono:</strong> +593 991389251</p>
+            </div>
+
+            <button class="close-button modal-button" onclick="closeModal()">
+                <span class="button-icon">✕</span>
+                <span class="button-text">Cerrar</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de contacto para stickers personalizables -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-product-name">Stickers Personalizables</h2>
+                <p class="modal-subtitle">Contacta con nosotros para crear tu diseño único</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>¡Hagamos realidad tu idea!</h3>
+                <p>Nuestro equipo te ayudará a crear el sticker perfecto según tus necesidades. El precio se ajustará al formato y diseño que elijas.</p>
+            </div>
+
+            <div class="contact-options">
+                <h3>Opciones de Contacto</h3>
+                
+                <button class="contact-button whatsapp-btn" onclick="contactWhatsApp()">
+                    <span class="button-icon">📱</span>
+                    <span class="button-text">WhatsApp</span>
+                    <span class="button-subtitle">+593 991389251</span>
+                </button>
+                
+                <button class="contact-button email-btn" onclick="contactEmail()">
+                    <span class="button-icon">📧</span>
+                    <span class="button-text">Email</span>
+                    <span class="button-subtitle">lafilec01@gmail.com</span>
+                </button>
+            </div>
+
+            <div class="seller-info">
+                <h3>Información</h3>
+                <p><strong>Nombre:</strong> Ramiro Elba Surero</p>
+                <p><strong>Cédula:</strong> 1727259324</p>
+                <p><strong>Teléfono:</strong> +593 991389251</p>
+            </div>
+
+            <button class="close-button modal-button" onclick="closeContactModal()">
+                <span class="button-icon">✕</span>
+                <span class="button-text">Cerrar</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

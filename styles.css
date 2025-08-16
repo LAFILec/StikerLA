@@ -25,7 +25,6 @@ body {
     padding-top: 80px;
 }
 
-/* Mandala de fondo */
 .eternal-mandala {
     position: fixed;
     top: 50%;
@@ -159,7 +158,6 @@ body {
 .thread:nth-child(7) { top: 30%; left: 0; transform: rotate(270deg); animation-delay: 3s; }
 .thread:nth-child(8) { top: 15%; left: 15%; transform: rotate(315deg); animation-delay: 3.5s; }
 
-/* Sistema de partículas */
 .golden-particles {
     position: fixed;
     top: 0;
@@ -178,7 +176,6 @@ body {
     opacity: 0.6;
 }
 
-/* Header */
 header {
     background: linear-gradient(135deg, 
         rgba(26, 35, 126, 0.85) 0%, 
@@ -218,7 +215,6 @@ header.header-scrolled {
     border-bottom-color: rgba(255, 215, 0, 0.4);
 }
 
-/* Navegación */
 .navbar {
     display: flex;
     align-items: center;
@@ -360,7 +356,6 @@ header.header-scrolled {
     background: linear-gradient(45deg, var(--gold), var(--light-gold)) !important;
 }
 
-/* Encabezado principal */
 .header {
     text-align: center;
     padding: clamp(2rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
@@ -409,7 +404,6 @@ header.header-scrolled {
     color: var(--gold);
 }
 
-/* Productos */
 .products-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -549,7 +543,6 @@ header.header-scrolled {
     background: linear-gradient(45deg, var(--gold), var(--light-gold));
 }
 
-/* Modales */
 .modal {
     display: none;
     position: fixed;
@@ -603,7 +596,6 @@ header.header-scrolled {
     font-style: italic;
 }
 
-/* Selector de cantidad */
 .quantity-section {
     text-align: center;
     margin: 1.5rem 0;
@@ -680,7 +672,6 @@ header.header-scrolled {
     animation: goldenShimmer 6s ease-in-out infinite;
 }
 
-/* Sección QR */
 .qr-section {
     text-align: center;
     margin: 2rem 0;
@@ -708,7 +699,6 @@ header.header-scrolled {
     transition: var(--transition-smooth);
 }
 
-/* Información del vendedor */
 .seller-info {
     background: rgba(255, 215, 0, 0.1);
     padding: clamp(1rem, 3vw, 1.5rem);
@@ -731,7 +721,6 @@ header.header-scrolled {
     color: var(--light-gold);
 }
 
-/* Información de contacto */
 .contact-info {
     background: rgba(255, 215, 0, 0.1);
     padding: clamp(1rem, 3vw, 1.5rem);
@@ -755,7 +744,6 @@ header.header-scrolled {
     opacity: 0.9;
 }
 
-/* Opciones de contacto */
 .contact-options {
     margin: 2rem 0;
 }
@@ -826,7 +814,6 @@ header.header-scrolled {
     background: linear-gradient(45deg, #FBBC05, #EA4335);
 }
 
-/* Botones del modal */
 .modal-button {
     width: 100%;
     padding: clamp(10px, 3vw, 14px);
@@ -886,7 +873,6 @@ header.header-scrolled {
     color: var(--gold);
 }
 
-/* Animaciones */
 @keyframes logoEntrance {
     0% {
         opacity: 0;
@@ -1067,7 +1053,6 @@ header.header-scrolled {
     }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
@@ -1222,4 +1207,18 @@ header.header-scrolled {
         height: 30px;
         font-size: 0.9rem;
     }
+}
+
+.qr-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.qr-container img.qr-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }

@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eternals Store - Portal de Productos</title>
+    <title>Portal Stickers</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&family=Trajan+Pro:wght@400;700&family=Futura:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Mandala de fondo -->
     <div class="eternal-mandala">
         <div class="mandala-ring"></div>
         <div class="mandala-ring"></div>
@@ -37,10 +36,8 @@
         </div>
     </div>
 
-    <!-- Sistema de partículas -->
     <div class="golden-particles" id="particles"></div>
 
-    <!-- Header -->
     <header id="header">
         <nav class="navbar">
             <a href="https://lafilec.github.io/LAFILec/" class="logo">
@@ -63,23 +60,19 @@
         </nav>
     </header>
 
-    <!-- Encabezado principal -->
     <div class="header">
         <h1 class="main-logo">STICKER STORE</h1>
         <p class="subtitle">Personaliza, colecciona y expresa con estilo, cada diseño cuenta algo. Tú decides dónde y cómo.</p>
     </div>
 
-    <!-- Contenedor de productos -->
     <div class="products-container">
         <div class="products-grid" id="productsGrid"></div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <p class="copyright">© 2025 La Fil. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Modal de compra normal -->
     <div id="purchaseModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -87,7 +80,6 @@
                 <p class="modal-product-price" id="modalProductPrice">$0.00</p>
             </div>
 
-            <!-- Selector de cantidad -->
             <div class="quantity-section">
                 <h3 class="quantity-title">Cantidad</h3>
                 <div class="quantity-controls">
@@ -98,20 +90,18 @@
                 <div class="total-price" id="totalPrice">Total: $0.00</div>
             </div>
 
-            <!-- Sección QR -->
             <div class="qr-section">
-                <h3 class="qr-title">Código QR de Pago</h3>
-                <div class="qr-placeholder">
-                    El código QR <br>
+                <h3 class="qr-title">Información de pago</h3>
+                <div class="qr-container">
+                         <img src="PB.png" alt="Código QR de pago" class="qr-image">
                 </div>
             </div>
 
-            <!-- Información del vendedor -->
             <div class="seller-info">
                 <h3>Información</h3>
-                <p><strong>Nombre:</strong> Ramiro Elba Surero</p>
-                <p><strong>Cédula:</strong> 1727259324</p>
-                <p><strong>Teléfono:</strong> +593 991389251</p>
+                <p><strong>Nombre:</strong> David Panchi</p>
+                <p><strong>Teléfono:</strong> +593 998770378</p>
+                <p><strong>La entrega se realiza en coordinación con el proovedor, tiempo de espera aproximado de 24h.</p>
             </div>
 
             <button class="close-button modal-button" onclick="closeModal()">
@@ -121,7 +111,6 @@
         </div>
     </div>
 
-    <!-- Modal de contacto para stickers personalizables -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -140,7 +129,7 @@
                 <button class="contact-button whatsapp-btn" onclick="contactWhatsApp()">
                     <span class="button-icon">📱</span>
                     <span class="button-text">WhatsApp</span>
-                    <span class="button-subtitle">+593 991389251</span>
+                    <span class="button-subtitle">+593 998770378</span>
                 </button>
                 
                 <button class="contact-button email-btn" onclick="contactEmail()">
@@ -152,9 +141,9 @@
 
             <div class="seller-info">
                 <h3>Información</h3>
-                <p><strong>Nombre:</strong> Ramiro Elba Surero</p>
-                <p><strong>Cédula:</strong> 1727259324</p>
-                <p><strong>Teléfono:</strong> +593 991389251</p>
+                <p><strong>Nombre:</strong> David Panchi</p>
+                <p><strong>Teléfono:</strong> +593 998770378</p>
+                <p><strong>La entrega se realizara en coordinación con el distrubuidor</p>
             </div>
 
             <button class="close-button modal-button" onclick="closeContactModal()">

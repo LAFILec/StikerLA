@@ -102,11 +102,11 @@ const utils = {
         };
     },
 
-    formatPrice: (price) => price ? `${price.toFixed(2)}` : 'Precio a consultar',
+    formatPrice: (price) => price ? `$${price.toFixed(2)}` : 'Precio a consultar',
 
     calculateTotal: (price, quantity) => {
         if (!price) return 'A consultar';
-        return `${(price * quantity).toFixed(2)}`;
+        return `$${(price * quantity).toFixed(2)}`;
     }
 };
 

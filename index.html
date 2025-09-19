@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Stickers</title>
     <meta name="description" content="Tienda de stickers personalizados con diseños únicos y coleccionables">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="LFgold.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="LFgold.png">
+    <link rel="shortcut icon" href="LFgold.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="LFgold.png">
+    <meta name="msapplication-TileImage" content="LFgold.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -81,6 +88,8 @@
 
     <div id="purchaseModal" class="modal" role="dialog" aria-labelledby="modalProductName" aria-hidden="true">
         <div class="modal-content">
+            <button class="modal-close-x" onclick="closeModal()" aria-label="Cerrar modal">×</button>
+            
             <div class="modal-header">
                 <h2 class="modal-product-name" id="modalProductName">Producto</h2>
                 <p class="modal-product-price" id="modalProductPrice">$0.00</p>
@@ -119,15 +128,13 @@
                 </div>
                 <p class="delivery-note"><strong>La entrega se realiza en coordinación con el proveedor, tiempo de espera aproximado de 24h.</strong></p>
             </div>
-
-            <button class="modal-btn close-btn" onclick="closeModal()" aria-label="Cerrar modal">
-                <span>Cerrar</span>
-            </button>
         </div>
     </div>
 
     <div id="contactModal" class="modal" role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
         <div class="modal-content">
+            <button class="modal-close-x" onclick="closeContactModal()" aria-label="Cerrar modal">×</button>
+            
             <div class="modal-header">
                 <h2 id="contactModalTitle" class="modal-product-name">Stickers Personalizables</h2>
                 <p class="modal-subtitle">Contacta con nosotros para crear tu diseño único</p>
@@ -162,6 +169,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=20250101"></script>
+    <script src="script.js"></script>
 </body>
 </html>

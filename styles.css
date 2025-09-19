@@ -567,16 +567,44 @@ header.header-scrolled {
 
 .modal-content {
     background: linear-gradient(135deg, var(--sapphire), var(--azure));
-    margin: 5% auto;
-    padding: clamp(1.5rem, 4vw, 2rem);
+    margin: 8% auto;
+    padding: clamp(1.2rem, 3vw, 1.8rem);
     border: 2px solid var(--gold);
     border-radius: 20px;
-    width: min(90%, 500px);
+    width: min(85%, 450px);
     position: relative;
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
     animation: slideIn 0.4s ease-out;
-    max-height: 90vh;
+    max-height: 85vh;
     overflow-y: auto;
+}
+
+.modal-close-x {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--gold);
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--smooth);
+    z-index: 10;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.modal-close-x:hover {
+    background: rgba(255, 215, 0, 0.2);
+    color: var(--light-gold);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
 .modal-header {
@@ -716,6 +744,7 @@ header.header-scrolled {
     justify-content: center;
     gap: clamp(1rem, 4vw, 1.5rem);
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 
 .contact-btn {
@@ -766,6 +795,17 @@ header.header-scrolled {
     color: var(--white);
 }
 
+.delivery-note {
+    color: var(--light-gold);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    text-align: center;
+    opacity: 0.9;
+    padding: 1rem;
+    background: rgba(255, 215, 0, 0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
 .seller-info {
     background: rgba(255, 215, 0, 0.08);
     padding: clamp(1rem, 3vw, 1.5rem);
@@ -778,18 +818,6 @@ header.header-scrolled {
     font-size: clamp(0.85rem, 2vw, 1rem);
     margin-bottom: 0.5rem;
     color: var(--light-gold);
-}
-
-.delivery-note {
-    color: var(--light-gold);
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    margin-top: 1rem;
-    text-align: center;
-    opacity: 0.9;
-    padding: 1rem;
-    background: rgba(255, 215, 0, 0.08);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .contact-info {
@@ -806,40 +834,6 @@ header.header-scrolled {
     font-size: clamp(0.9rem, 2vw, 1rem);
     line-height: 1.6;
     opacity: 0.9;
-}
-
-.modal-btn {
-    width: 100%;
-    padding: clamp(10px, 3vw, 14px);
-    margin: 0.5rem 0;
-    border: none;
-    border-radius: 25px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: var(--bounce);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: clamp(0.85rem, 2vw, 1rem);
-}
-
-.close-btn {
-    background: linear-gradient(45deg, var(--gray), var(--azure));
-    color: var(--white);
-    border: 2px solid rgba(255, 215, 0, 0.25);
-}
-
-.close-btn:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 18px rgba(255, 215, 0, 0.3);
-    background: linear-gradient(45deg, var(--azure), var(--gold));
-    color: var(--deep-blue);
-    border-color: var(--gold);
 }
 
 .footer {
